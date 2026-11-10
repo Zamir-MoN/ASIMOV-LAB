@@ -11,6 +11,7 @@ export const HeroBanner: React.FC = () => {
           muted
           playsInline
           preload="auto"
+          poster="/images/hero-poster.webp"
           className="w-full h-auto max-h-[85vh] object-cover block"
           style={{
             aspectRatio: '4096 / 2160'
