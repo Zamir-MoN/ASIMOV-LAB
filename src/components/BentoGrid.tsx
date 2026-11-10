@@ -1,16 +1,47 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { PRODUCTS } from '../data/products';
 import { Product } from '../types';
 import { ProductCard } from './ProductCard';
 import { 
   Grid, 
-  SlidersHorizontal 
+  SlidersHorizontal,
+  ChevronDown,
+  Check
 } from 'lucide-react';
+
+const SORT_OPTIONS: { value: 'featured' | 'price-asc' | 'price-desc' | 'rating' | 'discount'; label: string }[] = [
+  { value: 'featured', label: 'Curated Picks' },
+  { value: 'rating', label: 'Highest Client Rating' },
+  { value: 'discount', label: 'Biggest Savings %' },
+  { value: 'price-asc', label: 'Price: Low to High' },
+  { value: 'price-desc', label: 'Price: High to Low' },
+];
 
 export const BentoGrid: React.FC = () => {
   const [sortBy, setSortBy] = useState<'featured' | 'price-asc' | 'price-desc' | 'rating' | 'discount'>('featured');
   const [filterOrganic, setFilterOrganic] = useState(false);
   const [filterDiscounted, setFilterDiscounted] = useState(false);
+  const [isSortOpen, setIsSortOpen] = useState(false);
+  const sortRef = useRef<HTMLDivElement>(null);
+
+  // Close dropdown on click outside or Escape
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (sortRef.current && !sortRef.current.contains(e.target as Node)) {
+        setIsSortOpen(false);
+      }
+    };
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsSortOpen(false);
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
 
   const filteredProducts = useMemo(() => {
     return PRODUCTS.filter((item: Product) => {
@@ -73,19 +104,58 @@ export const BentoGrid: React.FC = () => {
             </label>
           </div>
 
-          <div className="flex items-center gap-2">
-            <span className="text-[#5D5470] font-mono text-[11px] uppercase">Sort By:</span>
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as any)}
-              className="bg-[#FAF6F0] border border-[#D8CEBF] text-[#2A2438] rounded-[3px] px-2.5 py-1 text-xs font-mono focus:outline-none focus:border-[#9B8EC7]"
-            >
-              <option value="featured">Curated Picks</option>
-              <option value="rating">Highest Client Rating</option>
-              <option value="discount">Biggest Savings %</option>
-              <option value="price-asc">Price: Low to High</option>
-              <option value="price-desc">Price: High to Low</option>
-            </select>
+          {/* Bespoke Luxury Sort Dropdown Menu */}
+          <div ref={sortRef} className="relative z-30">
+            <div className="flex items-center gap-2">
+              <span className="text-[#5D5470] font-mono text-[11px] uppercase tracking-wider hidden sm:inline">Sort By:</span>
+              <button
+                type="button"
+                onClick={() => setIsSortOpen(!isSortOpen)}
+                aria-haspopup="listbox"
+                aria-expanded={isSortOpen}
+                className="inline-flex items-center justify-between gap-2.5 bg-[#FAF6F0] hover:bg-[#F2EAE0] border border-[#D8CEBF] hover:border-[#9B8EC7] text-[#2A2438] rounded-md px-3 py-1.5 text-xs font-mono font-medium transition-all shadow-2xs focus:outline-none min-w-[160px]"
+              >
+                <span>{SORT_OPTIONS.find(o => o.value === sortBy)?.label}</span>
+                <ChevronDown className={`w-3.5 h-3.5 text-[#625096] transition-transform duration-200 ${isSortOpen ? 'rotate-180' : ''}`} />
+              </button>
+            </div>
+
+            {/* Floating Luxury Menu Popover */}
+            {isSortOpen && (
+              <div 
+                role="listbox"
+                className="absolute right-0 top-full mt-1.5 w-56 bg-[#FFFFFF] border border-[#D8CEBF] rounded-xl shadow-xl py-1.5 z-40 overflow-hidden"
+              >
+                <div className="px-3.5 py-1 text-[9.5px] font-mono uppercase tracking-[0.2em] text-[#7E7494] border-b border-[#F2EAE0] mb-1 font-bold">
+                  Order Collection
+                </div>
+                {SORT_OPTIONS.map((option) => {
+                  const isSelected = sortBy === option.value;
+                  return (
+                    <button
+                      key={option.value}
+                      type="button"
+                      role="option"
+                      aria-selected={isSelected}
+                      onClick={() => {
+                        setSortBy(option.value);
+                        setIsSortOpen(false);
+                      }}
+                      className={`w-full text-left px-3.5 py-2 text-xs font-mono flex items-center justify-between transition-colors ${
+                        isSelected 
+                          ? 'bg-[#F2EAE0] text-[#625096] font-bold' 
+                          : 'text-[#2A2438] hover:bg-[#FAF6F0] hover:text-[#625096]'
+                      }`}
+                    >
+                      <span>{option.label}</span>
+                      {isSelected && (
+                        <Check className="w-3.5 h-3.5 text-[#625096] stroke-[2.5]" />
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
+            )}
           </div>
         </div>
 
