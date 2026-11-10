@@ -4,18 +4,50 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="/images/logo.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0" />
+  <meta name="theme-color" content="#FAF6F0" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#141218" media="(prefers-color-scheme: dark)" />
+  <meta name="description" content="ASIMOV LAB — Quiet Luxury, Architectural Silhouettes, Pure Natural Cashmere and Virgin Wool." />
+
   <title>ASIMOV LAB</title>
-  <!-- Google Fonts: Lato & JetBrains Mono -->
+
+  <!-- Performance & Pre-rendering Resource Hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://flagcdn.com">
+  <link rel="dns-prefetch" href="https://images.unsplash.com">
+
+  <!-- Preload Critical Logo in WebP for Instant Processing -->
+  <link rel="preload" as="image" href="/images/logo.webp" type="image/webp" fetchpriority="high">
+
+  <!-- Google Fonts: Lato & JetBrains Mono with font-display: swap for Zero CLS -->
   <link
     href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap"
-    rel="stylesheet">
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'">
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap"
+      rel="stylesheet">
+  </noscript>
+
+  <!-- Chrome/Edge Speculative Rules for Instant View Transitions & Pre-rendering -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "source": "list",
+        "urls": ["/"],
+        "eagerness": "eager"
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body
-  class="bg-[#F2EAE0] text-[#2A2438] font-lato antialiased selection:bg-[#9B8EC7] selection:text-white min-h-screen overflow-x-hidden">
+  class="bg-[#F2EAE0] text-[#2A2438] font-lato antialiased selection:bg-[#9B8EC7] selection:text-white min-h-screen overflow-x-hidden pt-safe pb-safe">
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
 </body>

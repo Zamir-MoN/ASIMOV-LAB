@@ -95,9 +95,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateToSection }) => {
               title="Return to Home / Collection"
             >
               <img 
-                src="/images/logo.png" 
+                src="/images/logo.webp" 
                 alt="ASIMOV LAB" 
                 className="h-8 sm:h-9 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+                fetchPriority="high"
+                decoding="async"
               />
             </div>
 
@@ -255,7 +257,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateToSection }) => {
               className="cursor-pointer"
             >
               <img 
-                src="/images/logo.png" 
+                src="/images/logo.webp" 
                 alt="ASIMOV LAB" 
                 className="h-7 w-auto object-contain"
                 loading="eager"

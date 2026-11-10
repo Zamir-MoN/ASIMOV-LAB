@@ -14,10 +14,10 @@ export const PRODUCTS: Product[] = [
     reviewsCount: 184,
     releaseYear: 2026,
     tags: ['NEW ARRIVAL', 'ORGANIC WOOL', 'SIGNATURE PIECE'],
-    image: 'https://images.unsplash.com/photo-1544022613-e87ca75a784a?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1544022613-e87ca75a784a?auto=format&fm=webp&fit=crop&w=800&q=75',
     gallery: [
-      'https://images.unsplash.com/photo-1544022613-e87ca75a784a?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1544022613-e87ca75a784a?auto=format&fm=webp&fit=crop&w=800&q=75',
+      'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fm=webp&fit=crop&w=800&q=75'
     ],
     description: 'An architectural centerpiece designed for effortless cold-season layering. Crafted in Italy from premium virgin wool with dropped shoulders, horn buttons, and a clean storm flap silhouette.',
     features: [
@@ -53,10 +53,10 @@ export const PRODUCTS: Product[] = [
     reviewsCount: 220,
     releaseYear: 2026,
     tags: ['PURE CASHMERE', 'BESTSELLER', 'LUXURY ESSENTIAL'],
-    image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fm=webp&fit=crop&w=800&q=75',
     gallery: [
-      'https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fm=webp&fit=crop&w=800&q=75',
+      'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fm=webp&fit=crop&w=800&q=75'
     ],
     description: 'Spun from Grade-A Mongolian cashmere fibers, this ribbed turtleneck combines cloud-like softness with dense, pill-resistant durability. Finished with seamless tubular knit cuffs.',
     features: [
@@ -91,9 +91,9 @@ export const PRODUCTS: Product[] = [
     reviewsCount: 142,
     releaseYear: 2026,
     tags: ['MODERN TAILORING', 'ESSENTIAL'],
-    image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fm=webp&fit=crop&w=800&q=75',
     gallery: [
-      'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fm=webp&fit=crop&w=800&q=75'
     ],
     description: 'Precision cut from high-twist tropical wool. Features an extended tab closure, side button adjusters, and deep double front pleats that drape cleanly over loafers or sneakers.',
     features: [
@@ -128,9 +128,9 @@ export const PRODUCTS: Product[] = [
     reviewsCount: 310,
     releaseYear: 2026,
     tags: ['ORGANIC COTTON', 'SUMMER ESSENTIAL'],
-    image: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fm=webp&fit=crop&w=800&q=75',
     gallery: [
-      'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fm=webp&fit=crop&w=800&q=75'
     ],
     description: 'A modern rework of the classic tailoring staple. Tailored from high-density organic cotton poplin that holds its crisp drape through all-day wear.',
     features: [
@@ -165,9 +165,9 @@ export const PRODUCTS: Product[] = [
     reviewsCount: 265,
     releaseYear: 2026,
     tags: ['FULL GRAIN LEATHER', 'HANDMADE'],
-    image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fm=webp&fit=crop&w=800&q=75',
     gallery: [
-      'https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fm=webp&fit=crop&w=800&q=75'
     ],
     description: 'Handmade in the Marche region of Italy. Features ultra-supple buttery calf leather, removable vegetable-tanned leather insoles, and durable Margom vulcanized cup soles.',
     features: [
@@ -202,9 +202,9 @@ export const PRODUCTS: Product[] = [
     reviewsCount: 118,
     releaseYear: 2026,
     tags: ['SUEDE LEATHER', 'HERITAGE'],
-    image: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fm=webp&fit=crop&w=800&q=75',
     gallery: [
-      'https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fm=webp&fit=crop&w=800&q=75'
     ],
     description: 'A timeless silhouette elevated through ultra-plush goat suede. Detailed with tonal wool-blend ribbing at the neck and cuffs, and an easy two-way Lampo front zipper.',
     features: [
@@ -239,9 +239,9 @@ export const PRODUCTS: Product[] = [
     reviewsCount: 480,
     releaseYear: 2026,
     tags: ['HEAVYWEIGHT', '500 GSM', 'ORGANIC'],
-    image: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fm=webp&fit=crop&w=800&q=75',
     gallery: [
-      'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fm=webp&fit=crop&w=800&q=75'
     ],
     description: 'Constructed from custom-knit 500 GSM organic French terry cotton. Custom boxy cut with zero drawstrings for a pure, clean aesthetic. Pre-shrunk for an enduring fit.',
     features: [
@@ -276,9 +276,9 @@ export const PRODUCTS: Product[] = [
     reviewsCount: 160,
     releaseYear: 2026,
     tags: ['VEGETABLE TANNED', 'HANDCRAFTED'],
-    image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fm=webp&fit=crop&w=800&q=75',
     gallery: [
-      'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fm=webp&fit=crop&w=800&q=75'
     ],
     description: 'Cut from thick 2.2mm Tuscan vegetable-tanned bridle leather that will develop an irreplaceable rich patina over decades of use. Sized generously for a 16-inch laptop and daily essentials.',
     features: [

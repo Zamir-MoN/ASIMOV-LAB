@@ -48,7 +48,7 @@ const SLIDES: SlideData[] = [
         price: 31999,
         origPrice: 43999,
         discount: '-27%',
-        image: 'https://images.unsplash.com/photo-1544022613-e87ca75a784a?auto=format&fit=crop&w=600&q=80',
+        image: 'https://images.unsplash.com/photo-1544022613-e87ca75a784a?auto=format&fm=webp&fit=crop&w=600&q=75',
         productIndex: 0
       },
       {
@@ -59,7 +59,7 @@ const SLIDES: SlideData[] = [
         price: 19999,
         origPrice: 27999,
         discount: '-28%',
-        image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=600&q=80',
+        image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fm=webp&fit=crop&w=600&q=75',
         productIndex: 1
       },
       {
@@ -70,7 +70,7 @@ const SLIDES: SlideData[] = [
         price: 15999,
         origPrice: 21499,
         discount: '-25%',
-        image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=600&q=80',
+        image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fm=webp&fit=crop&w=600&q=75',
         productIndex: 2
       },
       {
@@ -81,7 +81,7 @@ const SLIDES: SlideData[] = [
         price: 39999,
         origPrice: 52999,
         discount: '-24%',
-        image: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80',
+        image: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fm=webp&fit=crop&w=600&q=75',
         productIndex: 5
       }
     ]
@@ -106,7 +106,7 @@ const SLIDES: SlideData[] = [
         price: 19999,
         origPrice: 27999,
         discount: '-28%',
-        image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=600&q=80',
+        image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fm=webp&fit=crop&w=600&q=75',
         productIndex: 1
       },
       {
@@ -117,7 +117,7 @@ const SLIDES: SlideData[] = [
         price: 11499,
         origPrice: 15499,
         discount: '-22%',
-        image: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80',
+        image: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fm=webp&fit=crop&w=600&q=75',
         productIndex: 3
       },
       {
@@ -128,7 +128,7 @@ const SLIDES: SlideData[] = [
         price: 21499,
         origPrice: 28999,
         discount: '-25%',
-        image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=600&q=80',
+        image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fm=webp&fit=crop&w=600&q=75',
         productIndex: 4
       },
       {
@@ -139,7 +139,7 @@ const SLIDES: SlideData[] = [
         price: 10999,
         origPrice: 14499,
         discount: '-20%',
-        image: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80',
+        image: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fm=webp&fit=crop&w=600&q=75',
         productIndex: 6
       }
     ]
@@ -164,7 +164,7 @@ const SLIDES: SlideData[] = [
         price: 22999,
         origPrice: 31499,
         discount: '-20%',
-        image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80',
+        image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fm=webp&fit=crop&w=600&q=75',
         productIndex: 7
       },
       {
@@ -175,7 +175,7 @@ const SLIDES: SlideData[] = [
         price: 39999,
         origPrice: 52999,
         discount: '-24%',
-        image: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80',
+        image: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fm=webp&fit=crop&w=600&q=75',
         productIndex: 5
       },
       {
@@ -186,7 +186,7 @@ const SLIDES: SlideData[] = [
         price: 31999,
         origPrice: 43999,
         discount: '-27%',
-        image: 'https://images.unsplash.com/photo-1544022613-e87ca75a784a?auto=format&fit=crop&w=600&q=80',
+        image: 'https://images.unsplash.com/photo-1544022613-e87ca75a784a?auto=format&fm=webp&fit=crop&w=600&q=75',
         productIndex: 0
       },
       {
@@ -197,7 +197,7 @@ const SLIDES: SlideData[] = [
         price: 15999,
         origPrice: 21499,
         discount: '-25%',
-        image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=600&q=80',
+        image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fm=webp&fit=crop&w=600&q=75',
         productIndex: 2
       }
     ]

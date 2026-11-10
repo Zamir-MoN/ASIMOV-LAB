@@ -10,7 +10,7 @@ export const AtelierCraftSection: React.FC = () => {
       {/* Background Moody Tailoring Atelier Collage */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <img 
-          src="/images/atelier-moody-collage.png" 
+          src="/images/atelier-moody-collage.webp" 
           alt="Moody Tailoring Atelier Collage" 
           className="w-full h-full object-cover object-center filter brightness-100 contrast-105 saturate-100"
           loading="lazy"

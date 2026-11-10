@@ -35,9 +35,11 @@ export const Footer: React.FC<FooterProps> = ({ isDarkPreceding = true }) => {
                   title="Return to Home / Collection"
                 >
                   <img 
-                    src="/images/logo.png" 
+                    src="/images/logo.webp" 
                     alt="ASIMOV LAB" 
                     className="h-8 sm:h-10 w-auto object-contain opacity-95 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <span className="text-[10px] sm:text-[11px] font-mono tracking-widest text-[#9B8EC7] uppercase font-bold border-l border-[#D8CEBF] pl-3">
