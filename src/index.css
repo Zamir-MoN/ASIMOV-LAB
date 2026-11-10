@@ -1,0 +1,344 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11", "kern";
+  font-kerning: normal;
+}
+
+/* Modal Lock: Freezes background scroll completely when cart or drawers are open */
+body.lenis-stopped,
+html.lenis-stopped {
+  overflow: hidden !important;
+  overscroll-behavior: none !important;
+  height: 100% !important;
+}
+
+[data-lenis-prevent] {
+  overscroll-behavior: contain !important;
+  touch-action: pan-y !important;
+}
+
+/* ========================================================
+   VIEW TRANSITIONS API ENHANCEMENT
+   Smooth zero-flicker cross-morphing across view states
+   ======================================================== */
+@supports (view-transition-name: root) {
+  ::view-transition-old(root) {
+    animation: 260ms cubic-bezier(0.16, 1, 0.3, 1) both vt-fade-out;
+  }
+  ::view-transition-new(root) {
+    animation: 320ms cubic-bezier(0.16, 1, 0.3, 1) both vt-fade-in;
+  }
+}
+
+@keyframes vt-fade-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.995);
+  }
+}
+
+@keyframes vt-fade-in {
+  from {
+    opacity: 0;
+    transform: scale(1.005);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ========================================================
+   SAFE AREA INSETS UTILITIES (iOS Notch, Dynamic Island, Home Bar)
+   ======================================================== */
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.pl-safe {
+  padding-left: env(safe-area-inset-left, 0px);
+}
+
+.pr-safe {
+  padding-right: env(safe-area-inset-right, 0px);
+}
+
+.mb-safe {
+  margin-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* ========================================================
+   TYPOGRAPHY POLISH: OPTICAL CENTERING, X-HEIGHT & LEADING
+   ======================================================== */
+/* Optical Centering for Badges, Icons, and CTA Buttons */
+.opt-center {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+/* Harmonized Heading Leading (Prevents accidental line gap overflow) */
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+
+p, span, div {
+  text-wrap: pretty;
+}
+
+/* Performance: Offscreen content visibility to accelerate rendering */
+.section-optimize {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 650px;
+}
+
+:root {
+  /* Color Palette Tokens */
+  --c-cream: #F2EAE0;
+  --c-cream-light: #FAF6F0;
+  --c-cream-card: #FFFFFF;
+  --c-cream-surface: #E8DED1;
+  --c-ice: #B4D3D9;
+  --c-ice-dark: #4d828c;
+  --c-lavender: #BDA6CE;
+  --c-periwinkle: #9B8EC7;
+  --c-periwinkle-dark: #625096;
+  --c-text-main: #2A2438;
+  --c-text-muted: #5D5470;
+  --c-border: rgba(155, 142, 199, 0.25);
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #F2EAE0;
+  color: #2A2438;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(180, 211, 217, 0.35), transparent),
+    radial-gradient(circle at 90% 20%, rgba(189, 166, 206, 0.25), transparent 45%),
+    radial-gradient(circle at 10% 70%, rgba(155, 142, 199, 0.18), transparent 50%);
+  background-attachment: fixed;
+}
+
+/* Custom scrollbar with creamy white palette */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E8DED1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #BDA6CE;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9B8EC7;
+}
+
+.gog-tile-card {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+}
+
+.gog-tile-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px -4px rgba(42, 36, 56, 0.12), 0 0 16px 0 rgba(155, 142, 199, 0.25);
+}
+
+/* 
+  AUTHENTIC VHS / CYBER-RUNWAY GLITCH EFFECT - SUBTLE & SPREAD OUT
+*/
+.glitch-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch-main {
+  position: relative;
+  color: #ffffff;
+  font-weight: 900;
+  animation: glitch-jitter 7s infinite steps(1, end);
+}
+
+.glitch-copy-1,
+.glitch-copy-2 {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  font-weight: 900;
+}
+
+.glitch-copy-1 {
+  color: #B4D3D9; /* Palette soft ice teal */
+  mix-blend-mode: screen;
+  opacity: 0.65;
+  animation: glitch-slice-1 6.5s infinite linear alternate-reverse;
+}
+
+.glitch-copy-2 {
+  color: #BDA6CE; /* Palette delicate lavender */
+  mix-blend-mode: screen;
+  opacity: 0.65;
+  animation: glitch-slice-2 7.8s infinite linear alternate-reverse;
+}
+
+.glitch-scanline {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(0, 0, 0, 0.25) 51%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+@keyframes glitch-slice-1 {
+  0%, 88% {
+    clip-path: inset(100% 0 0% 0);
+    transform: translate(0, 0);
+  }
+  89% {
+    clip-path: inset(30% 0 55% 0);
+    transform: translate(-3px, 0.5px) skew(-1deg);
+  }
+  91% {
+    clip-path: inset(70% 0 15% 0);
+    transform: translate(2px, -0.5px) skew(1deg);
+  }
+  93% {
+    clip-path: inset(100% 0 0% 0);
+    transform: translate(0, 0);
+  }
+  96% {
+    clip-path: inset(15% 0 75% 0);
+    transform: translate(-2px, 0);
+  }
+  98%, 100% {
+    clip-path: inset(100% 0 0% 0);
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes glitch-slice-2 {
+  0%, 86% {
+    clip-path: inset(100% 0 0% 0);
+    transform: translate(0, 0);
+  }
+  87% {
+    clip-path: inset(55% 0 25% 0);
+    transform: translate(3px, -0.5px) skew(1deg);
+  }
+  89% {
+    clip-path: inset(20% 0 65% 0);
+    transform: translate(-2px, 0.5px) skew(-0.8deg);
+  }
+  92% {
+    clip-path: inset(100% 0 0% 0);
+    transform: translate(0, 0);
+  }
+  95% {
+    clip-path: inset(75% 0 10% 0);
+    transform: translate(2px, 0);
+  }
+  97%, 100% {
+    clip-path: inset(100% 0 0% 0);
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes glitch-jitter {
+  0%, 88% {
+    transform: translate(0, 0);
+  }
+  89% {
+    transform: translate(-1.5px, 0.5px);
+  }
+  90% {
+    transform: translate(1.5px, -0.5px);
+  }
+  91% {
+    transform: translate(0, 0);
+  }
+  96% {
+    transform: translate(1px, -0.5px);
+  }
+  97% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Infinite Smooth Review Marquee Loop (Right to Left) */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 38s linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Infinite Brand Stripe Marquee Loop (Left to Right) */
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 55s linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
