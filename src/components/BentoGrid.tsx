@@ -120,11 +120,11 @@ export const BentoGrid: React.FC = () => {
               </button>
             </div>
 
-            {/* Floating Luxury Menu Popover */}
+            {/* Floating Luxury Menu Popover - Aligns left on mobile to prevent left-side cut off, right on desktop */}
             {isSortOpen && (
               <div 
                 role="listbox"
-                className="absolute right-0 top-full mt-1.5 w-56 bg-[#FFFFFF] border border-[#D8CEBF] rounded-xl shadow-xl py-1.5 z-40 overflow-hidden"
+                className="absolute left-0 sm:left-auto sm:right-0 top-full mt-1.5 w-56 max-w-[calc(100vw-2.5rem)] bg-[#FFFFFF] border border-[#D8CEBF] rounded-xl shadow-xl py-1.5 z-40 overflow-hidden"
               >
                 <div className="px-3.5 py-1 text-[9.5px] font-mono uppercase tracking-[0.2em] text-[#7E7494] border-b border-[#F2EAE0] mb-1 font-bold">
                   Order Collection
